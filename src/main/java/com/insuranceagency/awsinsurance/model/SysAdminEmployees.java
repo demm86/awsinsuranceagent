@@ -8,7 +8,7 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "SysAdmin")
+@Table(name = "SysAdminEmployees")
 @ToString @EqualsAndHashCode
 
 public class SysAdminEmployees {
