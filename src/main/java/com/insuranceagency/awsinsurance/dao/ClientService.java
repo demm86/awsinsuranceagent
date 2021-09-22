@@ -11,7 +11,7 @@ public interface ClientService {
 
     Client saveClient(Client client);
     Client updateClient(Client client);
-    Client getAgentById(Client id);
-    void deleteAgentById(Client id);
+    Client getClientById(Long id);
+    void deleteClientById(Long id);
 
 }
