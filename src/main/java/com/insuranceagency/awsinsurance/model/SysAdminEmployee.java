@@ -8,10 +8,10 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "SysAdminEmployees")
+@Table(name = "SysAdminEmployee")
 @ToString @EqualsAndHashCode
 
-public class SysAdminEmployees {
+public class SysAdminEmployee {
 
     @Getter @Setter @Column(name = "idSysAdminEmployee")
     private Long idSysAdminEmployee;
