@@ -14,6 +14,8 @@ import java.text.SimpleDateFormat;
 
 public class Client {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idClient")
     private Long idClient;
 

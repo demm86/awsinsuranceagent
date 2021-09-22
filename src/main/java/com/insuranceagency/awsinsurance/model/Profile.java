@@ -13,6 +13,8 @@ import javax.persistence.*;
 
 public class Profile {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idProfile")
     private Long idProfile;
 

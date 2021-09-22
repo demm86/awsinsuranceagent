@@ -14,6 +14,8 @@ import java.text.SimpleDateFormat;
 
 public class Dependent {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idDependent")
     private Long idDependent;
 

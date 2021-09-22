@@ -13,6 +13,8 @@ import javax.persistence.*;
 
 public class ClientAssignment {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idClientAssignments")
     private Long idClientAssignments;
 

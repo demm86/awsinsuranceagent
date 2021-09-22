@@ -13,6 +13,8 @@ import javax.persistence.*;
 
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idEmployee")
     private Long idEmployee;
 

@@ -13,6 +13,8 @@ import javax.persistence.*;
 
 public class PolicyStatus {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idStatus")
     private Long idStatus;
 

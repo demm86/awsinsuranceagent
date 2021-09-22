@@ -14,6 +14,8 @@ import java.text.SimpleDateFormat;
 
 public class InsurancePolicy {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idInsurancePolicy")
     private Long idInsurancePolicy;
 
@@ -28,30 +30,30 @@ public class InsurancePolicy {
 
     @Getter @Setter @Column(name = "idStatus")
     private Long idStatus;
-    //TODO ask about period type
-    //@Getter @Setter @Column(name = "period")
-    //private ? period;
-    //TODO ask about value type
-    //@Getter @Setter @Column(name = "value")
-    //private ? value;
-    //TODO ask about deductible type
-    //@Getter @Setter @Column(name = "deductible")
-    //private ? deductible;
-    //TODO ask about coverageAmount type
-    //@Getter @Setter @Column(name = "coverageAmount")
-    //private ? coverageAmount;
+
+    @Getter @Setter @Column(name = "period")
+    private int period;
+
+    @Getter @Setter @Column(name = "value")
+    private double value;
+
+    @Getter @Setter @Column(name = "deductible")
+    private double deductible;
+
+    @Getter @Setter @Column(name = "coverageAmount")
+    private double coverageAmount;
 
     @Getter @Setter @Column(name = "coverageStartDate")
     private SimpleDateFormat coverageStartDate;
-    //TODO ask about coveragePeriod type
-    //@Getter @Setter @Column(name = "coveragePeriod")
-    //private ? coveragePeriod;
-    //TODO ask about monthlyFee Type
-    //@Getter @Setter @Column(name = "monthlyFee")
-    //private ? monthlyFee;
-    //TODO ask about commission type
-    //@Getter @Setter @Column(name = "commission")
-    //private ? commission;
+
+    @Getter @Setter @Column(name = "coveragePeriod")
+    private int coveragePeriod;
+
+    @Getter @Setter @Column(name = "monthlyFee")
+    private double monthlyFee;
+
+    @Getter @Setter @Column(name = "commission")
+    private double commission;
 
     @Getter @Setter @Column(name = "active")
     private boolean active;
