@@ -13,6 +13,8 @@ import javax.persistence.*;
 
 public class SysAdminEmployee {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idSysAdminEmployee")
     private Long idSysAdminEmployee;
 

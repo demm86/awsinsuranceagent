@@ -13,25 +13,27 @@ import javax.persistence.*;
 
 public class PolicyType {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "idType")
     private Long idType;
 
     @Getter @Setter @Column(name = "description")
     private String description;
-    //TODO put values to these variables later
-    //@Getter @Setter @Column(name = "period")
-    //private void period;
 
-    //@Getter @Setter @Column(name = "value")
-    //private ? value;
+    @Getter @Setter @Column(name = "period")
+    private int period;
 
-    //@Getter @Setter @Column(name = "allowDependent")
-    //private ? allowDependent;
+    @Getter @Setter @Column(name = "value")
+    private double value;
 
-    //@Getter @Setter @Column(name = "maxDependent")
-    //private ? maxDependent;
+    @Getter @Setter @Column(name = "allowDependent")
+    private boolean allowDependent;
 
-    //@Getter @Setter @Column(name = "commission")
-    //private ? commission;
+    @Getter @Setter @Column(name = "maxDependent")
+    private int maxDependent;
+
+    @Getter @Setter @Column(name = "commission")
+    private double commission;
 
 }
