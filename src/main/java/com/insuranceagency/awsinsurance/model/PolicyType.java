@@ -31,7 +31,7 @@ public class PolicyType {
     //@Getter @Setter @Column(name = "maxDependent")
     //private ? maxDependent;
 
-    //@Getter @Setter @Column(name = "commision")
-    //private ? comission;
+    //@Getter @Setter @Column(name = "commission")
+    //private ? commission;
 
 }
