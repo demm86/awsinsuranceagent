@@ -10,7 +10,7 @@ public interface EmployeeService {
 
     List<Employee> getEmployee();
 
-    Employee saveEmployee(Employee employee);
+    Employee saveEmployee(Employee employee) throws Exception;;
     Employee updateEmployee(Employee employee);
     Employee getEmployeeById(Long id);
     Employee getEmployeeByFirstName(String Alias);
