@@ -18,7 +18,7 @@ import java.util.Date;
  * @author dmontes
  */
 @Component
-public class JWTUtil {
+public class JwtUtil {
     @Value("${security.jwt.secret}")
     private String key;
 
@@ -29,7 +29,7 @@ public class JWTUtil {
     private long ttlMillis;
 
     private final Logger log = LoggerFactory
-            .getLogger(JWTUtil.class);
+            .getLogger(JwtUtil.class);
 
     /**
      * Create a new token.
