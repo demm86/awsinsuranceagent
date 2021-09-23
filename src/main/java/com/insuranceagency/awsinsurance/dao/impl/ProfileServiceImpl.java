@@ -23,21 +23,38 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     public Profile saveProfile(Profile profile) {
-        return null;
+        Profile profileTmp = entityManager.merge(profile);
+        return profileTmp;
     }
 
     @Override
     public Profile updateProfile(Profile profile) {
-        return null;
+        Profile profileTmp = entityManager.find(Profile.class,profile.getIdProfile());
+        profileTmp.setDescription(profile.getDescription());
+        return entityManager.merge(profile);
     }
 
     @Override
     public Profile getProfileById(Long id) {
-        return null;
+        return entityManager.find(Profile.class,id);
+    }
+
+    @Override
+    public List<Profile>  getProfileByDescription(String description) {
+        String query ="From Profile where description = :description";
+        try {
+            List<Profile> list = entityManager.createQuery(query).setParameter("description", description).getResultList();
+            return list;
+        }
+        catch(Exception e) {
+         return  null;
+        }
+
     }
 
     @Override
     public void deleteProfileById(Long id) {
-
+        Profile profile = entityManager.find(Profile.class,id);
+        entityManager.remove(profile);
     }
 }
