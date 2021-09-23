@@ -1,6 +1,6 @@
 package com.insuranceagency.awsinsurance.controller;
 
-import com.insuranceagency.awsinsurance.dao.AgentAssignmentRepository;
+import com.insuranceagency.awsinsurance.repository.AgentAssignmentRepository;
 import com.insuranceagency.awsinsurance.model.AgentAssignment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

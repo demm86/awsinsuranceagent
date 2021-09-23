@@ -1,22 +1,29 @@
 package com.insuranceagency.awsinsurance.dao.impl;
 
-//import com.insuranceagency.awsinsurance.dao.EmployeeService;
+import com.insuranceagency.awsinsurance.dao.EmployeeService;
 import com.insuranceagency.awsinsurance.model.Employee;
-import com.insuranceagency.awsinsurance.model.Profile;
+import com.insuranceagency.awsinsurance.repository.EmployeeRepository;
+import com.insuranceagency.awsinsurance.repository.UsersRepo;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
 import java.util.List;
 
-@Repository
-@Transactional
-public class EmployeeServiceImpl /*implements EmployeeService*/ {
+//@Repository
+@Service @RequiredArgsConstructor @Transactional @Slf4j
+public class EmployeeServiceImpl implements EmployeeService {
 
     @PersistenceContext
     EntityManager entityManager;
-/*
+
+    private final EmployeeRepository employeeRepository;
+
     @Override
     public List<Employee> getEmployee() {
         String query = "FROM Employee";
@@ -25,7 +32,12 @@ public class EmployeeServiceImpl /*implements EmployeeService*/ {
 
     @Override
     public Employee saveEmployee(Employee employee) {
-        return null;
+        try{
+        return employeeRepository.save(employee);
+    }
+        catch(Exception e) {
+        return  null;
+    }
     }
 
     @Override
@@ -39,9 +51,14 @@ public class EmployeeServiceImpl /*implements EmployeeService*/ {
     }
 
     @Override
+    public Employee getEmployeeByFirstName(String Alias) {
+        return null;
+    }
+
+    @Override
     public void deleteEmployeeById(Long id) {
 
     }
-    */
+
 
 }
