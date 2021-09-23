@@ -11,6 +11,7 @@ public interface UserService {
     Users saveUser(Users user);
     Users updateUser(Users user);
     Users getUserById(Long id);
+    Users getUserByAlias(String Alias);
     void deleteUserById(Long id);
 
 
