@@ -1,16 +1,14 @@
 package com.insuranceagency.awsinsurance.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "Employees")
 @ToString @EqualsAndHashCode
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
 
     @Id

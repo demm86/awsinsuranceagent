@@ -1,4 +1,4 @@
-package com.insuranceagency.awsinsurance.dao;
+package com.insuranceagency.awsinsurance.repository;
 
 import com.insuranceagency.awsinsurance.model.AgentAssignment;
 import org.springframework.data.jpa.repository.JpaRepository;
