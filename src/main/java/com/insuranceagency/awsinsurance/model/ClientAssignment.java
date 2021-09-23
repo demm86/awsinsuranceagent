@@ -8,7 +8,7 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ClientAssignment")
+@Table(name = "ClientAssignments")
 @ToString @EqualsAndHashCode
 
 public class ClientAssignment {
@@ -21,8 +21,8 @@ public class ClientAssignment {
     @Getter @Setter @Column(name = "idClient")
     private Long idClient;
 
-    @Getter @Setter @Column(name = "idAgent")
-    private Long idAgent;
+    @Getter @Setter @Column(name = "idAgentEmployee")
+    private Long idAgentEmployee;
 
     @Getter @Setter @Column(name = "active")
     private boolean active;
