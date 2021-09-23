@@ -18,6 +18,12 @@ public class Employee {
     @Getter @Setter @Column(name = "idEmployee")
     private Long idEmployee;
 
+    @Getter @Setter @Column(name = "idRol")
+    private Long idRol;
+
+    @Getter @Setter @Column(name = "idUser")
+    private Long idUser;
+
     @Getter @Setter @Column(name = "firstName")
     private String firstName;
 

@@ -21,21 +21,10 @@ public class Users {
     @Getter @Setter @Column(name = "idProfile")
     private String idProfile;
 
-    @Getter @Setter @Column(name = "firstName")
-    private String firstName;
-
-    @Getter @Setter @Column(name = "lastName")
-    private String lastName;
-
     @Getter @Setter @Column(name = "userAlias")
     private String userAlias;
 
-    @Getter @Setter @Column(name = "email")
-    private String email;
-
-    @Getter @Setter @Column(name = "phone")
-    private String phone;
-
     @Getter @Setter @Column(name = "password")
     private String password;
+
 }
