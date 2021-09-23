@@ -38,22 +38,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users updateUser(Users user) {
-        return null;
+        Users usersTmp = usersRepo.getById(user.getIdUser());
+        usersTmp.setUserAlias(user.getUserAlias());
+        return usersRepo.save(usersTmp);
     }
 
     @Override
     public Users getUserById(Long id) {
-        return null;
+        Users usersTmp = usersRepo.getById(id);
+        return usersTmp;
     }
     @Override
     public Users getUserByAlias(String Alias) {
-        Users test =usersRepo.findByUserAlias(Alias);
-
-        return test;
+        Users usersTmp = usersRepo.findByUserAlias(Alias);
+        return usersTmp;
     }
 
     @Override
     public void deleteUserById(Long id) {
+        Users usersTmp = usersRepo.getById(id);
+        usersRepo.delete(usersTmp);
 
     }
 
