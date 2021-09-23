@@ -1,6 +1,6 @@
 package com.insuranceagency.awsinsurance.demo;
 
-import com.insuranceagency.awsinsurance.utils.JWTUtil;
+import com.insuranceagency.awsinsurance.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     @Autowired
-    private JWTUtil jwtUtil;
+    private JwtUtil jwtUtil;
 
     @GetMapping(path = "/hello-world")
     public String helloWorld() {
