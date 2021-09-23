@@ -1,6 +1,6 @@
 package com.insuranceagency.awsinsurance.dao.impl;
 
-import com.insuranceagency.awsinsurance.dao.EmployeeService;
+//import com.insuranceagency.awsinsurance.dao.EmployeeService;
 import com.insuranceagency.awsinsurance.model.Employee;
 import com.insuranceagency.awsinsurance.model.Profile;
 import org.springframework.stereotype.Repository;
@@ -12,11 +12,11 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl /*implements EmployeeService*/ {
 
     @PersistenceContext
     EntityManager entityManager;
-
+/*
     @Override
     public List<Employee> getEmployee() {
         String query = "FROM Employee";
@@ -42,5 +42,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteEmployeeById(Long id) {
 
     }
+    */
 
 }
