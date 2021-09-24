@@ -1,4 +1,4 @@
-package com.insuranceagency.awsinsurance.dao;
+package com.insuranceagency.awsinsurance.repository;
 
 import com.insuranceagency.awsinsurance.model.Client;
 import com.insuranceagency.awsinsurance.model.PolicyStatus;
