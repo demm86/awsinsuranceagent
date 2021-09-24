@@ -18,7 +18,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class PolicyStatusConotroller {
 
     @Autowired
-    private PolicyStatusService policyStatusService;
+    PolicyStatusService policyStatusService;
 
     @RequestMapping(value = "api/policystatus", method = GET)
 
@@ -52,8 +52,10 @@ public class PolicyStatusConotroller {
         policyStatusService.deletePolicyStatusById(id);
     }
 
-    @RequestMapping(value = "/api/description/{desc}", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/policystatus/{desc}", method = RequestMethod.GET)
     public PolicyStatus policyStatusDescription (@PathVariable String desc) {
         return policyStatusService.getPolicyStatusByDescription(desc);
     }
+
+
 }

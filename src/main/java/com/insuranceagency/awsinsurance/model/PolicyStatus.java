@@ -1,16 +1,13 @@
 package com.insuranceagency.awsinsurance.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "SysAdmin")
+@Table(name = "policyStatus")
 @ToString @EqualsAndHashCode
-
+@NoArgsConstructor
 public class PolicyStatus {
 
     @Id
@@ -19,6 +16,6 @@ public class PolicyStatus {
     private Long idStatus;
 
     @Getter @Setter @Column(name = "description")
-    private Long description;
+    private String description;
 
 }

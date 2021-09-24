@@ -41,7 +41,10 @@ public class PolicyStatusServiceImpl implements PolicyStatusService {
 
     @Override
     public PolicyStatus updatePolicyStatus(PolicyStatus policyStatus) {
-        return null;
+        PolicyStatus updateStatus = policyStatusRepository.getById(policyStatus.getIdStatus());
+        updateStatus.setIdStatus(policyStatus.getIdStatus());
+        updateStatus.setDescription(policyStatus.getDescription());
+        return policyStatusRepository.save(updateStatus);
     }
 
     @Override
@@ -56,6 +59,7 @@ public class PolicyStatusServiceImpl implements PolicyStatusService {
 
     @Override
     public void deletePolicyStatusById(Long id) {
-
+        PolicyStatus updateStatus = policyStatusRepository.getById(id);
+        policyStatusRepository.delete(updateStatus);
     }
 }
