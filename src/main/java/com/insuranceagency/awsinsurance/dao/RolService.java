@@ -12,5 +12,5 @@ public interface RolService {
     Rol saveRol(Rol rol);
     Rol updateRol(Rol rol);
     Rol getRolById(Long id);
-    Rol deleteRol(Long id);
+    void deleteRol(Long id);
 }
