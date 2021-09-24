@@ -1,4 +1,4 @@
-package com.insuranceagency.awsinsurance.dao;
+package com.insuranceagency.awsinsurance.repository;
 
 import com.insuranceagency.awsinsurance.model.Client;
 import com.insuranceagency.awsinsurance.model.PolicyStatus;
@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface PolicyStatusRepository extends JpaRepository<PolicyStatus, Long> {
-
+        PolicyStatus findByDescription(String description);
 
 }
