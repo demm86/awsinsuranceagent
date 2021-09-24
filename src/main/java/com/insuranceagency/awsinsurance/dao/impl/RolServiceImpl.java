@@ -52,7 +52,7 @@ public class RolServiceImpl implements RolService {
     }
 
     @Override
-    public Rol deleteRol(Long id) {
+    public void deleteRol(Long id) {
 
     }
 
