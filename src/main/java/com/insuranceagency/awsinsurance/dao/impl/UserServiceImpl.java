@@ -1,6 +1,6 @@
 package com.insuranceagency.awsinsurance.dao.impl;
 
-import com.insuranceagency.awsinsurance.dao.UserService;
+import com.insuranceagency.awsinsurance.dao.UsersService;
 import com.insuranceagency.awsinsurance.model.Users;
 import com.insuranceagency.awsinsurance.repository.UsersRepo;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,7 @@ import java.util.List;
 //@Repository
 //@Transactional
 @Service @RequiredArgsConstructor @Transactional @Slf4j
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UsersService {
 
     @PersistenceContext
     EntityManager entityManager;

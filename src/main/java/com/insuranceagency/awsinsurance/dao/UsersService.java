@@ -4,7 +4,7 @@ import com.insuranceagency.awsinsurance.model.Users;
 
 import java.util.List;
 
-public interface UserService {
+public interface UsersService {
 
     List<Users> getUsers();
 
