@@ -1,5 +1,6 @@
 package com.insuranceagency.awsinsurance.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -7,7 +8,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "policyStatus")
 @ToString @EqualsAndHashCode
+@AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class PolicyStatus {
 
     @Id

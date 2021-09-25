@@ -1,17 +1,17 @@
 package com.insuranceagency.awsinsurance.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Table(name = "InsurancePolicy")
 @ToString @EqualsAndHashCode
-
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class InsurancePolicy {
 
     @Id
@@ -22,8 +22,8 @@ public class InsurancePolicy {
     @Getter @Setter @Column(name = "idClient")
     private Long idClient;
 
-    @Getter @Setter @Column(name = "sellIDAgent")
-    private Long sellIDAgent;
+    @Getter @Setter @Column(name = "sellIdAgent")
+    private Long sellIdAgent;
 
     @Getter @Setter @Column(name = "idType")
     private Long idType;
@@ -44,16 +44,16 @@ public class InsurancePolicy {
     private double coverageAmount;
 
     @Getter @Setter @Column(name = "coverageStartDate")
-    private SimpleDateFormat coverageStartDate;
+    private Date coverageStartDate;
 
-    @Getter @Setter @Column(name = "coveragePeriod")
-    private int coveragePeriod;
+    @Getter @Setter @Column(name = "coveragePerior")
+    private int coveragePerior;
 
     @Getter @Setter @Column(name = "monthlyFee")
     private double monthlyFee;
 
-    @Getter @Setter @Column(name = "commission")
-    private double commission;
+    @Getter @Setter @Column(name = "comission")
+    private double comission;
 
     @Getter @Setter @Column(name = "active")
     private boolean active;

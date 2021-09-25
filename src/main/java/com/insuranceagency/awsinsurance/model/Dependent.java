@@ -1,17 +1,17 @@
 package com.insuranceagency.awsinsurance.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Table(name = "Dependent")
 @ToString @EqualsAndHashCode
-
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Dependent {
 
     @Id
@@ -35,6 +35,6 @@ public class Dependent {
     private String phone;
 
     @Getter @Setter @Column(name = "birthday")
-    private SimpleDateFormat birthday;
+    private Date birthday;
 
 }
