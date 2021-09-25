@@ -30,8 +30,13 @@ public class RolController {
     }
 
     @RequestMapping(value = "api/rol/{id}", method = RequestMethod.DELETE)
-    public void deleteRol(@PathVariable Long id) {
+    public void deleteRol(@PathVariable("id") Long id) {
         rolService.deleteRol(id);
+    }
+
+    @RequestMapping(value = "api/rol/{id}", method = RequestMethod.GET)
+    public Rol getRolById(@PathVariable("id") Long id){
+        return rolService.getRolById(id);
     }
 
 }

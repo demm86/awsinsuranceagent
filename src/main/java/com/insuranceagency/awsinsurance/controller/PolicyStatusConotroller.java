@@ -24,7 +24,6 @@ public class PolicyStatusConotroller {
 
     public List<PolicyStatus> getPolicyStatus() {
         List<PolicyStatus> test = policyStatusService.getPolicyStatus();
-        test.forEach(System.out::println);
         return test;
     }
 

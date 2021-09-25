@@ -50,4 +50,9 @@ public class UserController {
     public Users userAlias( @PathVariable String alias) {
        return userService.getUserByAlias(alias);
     }
+
+    @RequestMapping(value = "/api/user/{id}", method = RequestMethod.GET)
+    public Users userById( @PathVariable long id) {
+        return userService.getUserById(id);
+    }
 }

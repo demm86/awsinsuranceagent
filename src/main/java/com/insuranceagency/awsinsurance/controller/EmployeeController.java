@@ -48,8 +48,8 @@ public class EmployeeController {
         employeeService.deleteEmployeeById(id);
     }
 
-    @RequestMapping(value = "/api/employeeFirstName/{alias}", method = RequestMethod.GET)
-    public Employee employeeFirstName( @PathVariable String alias) {
-        return employeeService.getEmployeeByFirstName(alias);
+    @RequestMapping(value = "/api/employee/{id}", method = RequestMethod.GET)
+    public Employee getEmployeeById( @PathVariable("id") long id) {
+        return employeeService.getEmployeeById(id);
     }
 }
