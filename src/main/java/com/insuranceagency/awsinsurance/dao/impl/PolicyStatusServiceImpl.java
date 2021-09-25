@@ -49,12 +49,8 @@ public class PolicyStatusServiceImpl implements PolicyStatusService {
 
     @Override
     public PolicyStatus getPolicyStatusById(Long id) {
-        return null;
-    }
-
-    @Override
-    public PolicyStatus getPolicyStatusByDescription(String descriptionInfo) {
-        return null;
+        PolicyStatus policyStatus = policyStatusRepository.getById(id);
+        return policyStatus;
     }
 
     @Override
