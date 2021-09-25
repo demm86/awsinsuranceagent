@@ -9,6 +9,6 @@ public interface PolicyTypeService {
 
     PolicyType savePolicyType(PolicyType agent);
     PolicyType updatePolicyType(PolicyType agent);
-    PolicyType getPolicyType(Long id);
+    PolicyType getPolicyTypeById(Long id);
     void deletePolicyTypeById(Long id);
 }

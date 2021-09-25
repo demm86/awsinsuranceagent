@@ -1,10 +1,14 @@
 package com.insuranceagency.awsinsurance.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
 @Table(name = "Profile")
-@Entity @Data @NoArgsConstructor @AllArgsConstructor
+@Entity @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Profile {
 
     @Id

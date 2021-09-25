@@ -43,17 +43,21 @@ public class RolServiceImpl implements RolService {
 
     @Override
     public Rol updateRol(Rol rol) {
-        return null;
+        Rol temp = rolRepository.getById(rol.getIdRol());
+        temp.setDescription(rol.getDescription());
+        return rolRepository.save(temp);
     }
 
     @Override
     public Rol getRolById(Long id) {
-        return null;
+        Rol rol = rolRepository.getById(id);
+        return rol;
     }
 
     @Override
     public void deleteRol(Long id) {
-
+        Rol rol = rolRepository.getById(id);
+        rolRepository.delete(rol);
     }
 
 }

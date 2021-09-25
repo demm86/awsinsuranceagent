@@ -36,4 +36,9 @@ public class InsurancePolicyController {
     public void deleteInsurancePolicy(@PathVariable("id") long id){
         insurancePolicyService.deleteInsurancePolicyById(id);
     }
+
+    @RequestMapping(value = "api/InsurancePolicy/{id}", method = RequestMethod.GET)
+    public InsurancePolicy getInsurancePolicyById(@PathVariable("id") long id){
+        return insurancePolicyService.getInsurancePolicyById(id);
+    }
 }

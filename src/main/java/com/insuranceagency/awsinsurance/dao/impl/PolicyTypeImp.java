@@ -51,8 +51,9 @@ public class PolicyTypeImp implements PolicyTypeService {
     }
 
     @Override
-    public PolicyType getPolicyType(Long id) {
-        return null;
+    public PolicyType getPolicyTypeById(Long id) {
+        PolicyType policyType = policyTypeRepository.getById(id);
+        return policyType;
     }
 
     @Override

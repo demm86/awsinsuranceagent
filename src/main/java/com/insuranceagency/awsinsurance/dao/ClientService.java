@@ -1,6 +1,5 @@
 package com.insuranceagency.awsinsurance.dao;
 
-
 import com.insuranceagency.awsinsurance.model.Client;
 
 import java.util.List;

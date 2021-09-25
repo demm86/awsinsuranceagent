@@ -22,7 +22,6 @@ public class AgentAssignmentImpl implements AgentAssignmentService {
     EntityManager entityManager;
     private final AgentAssignmentRepository agentAssignmentRepository;
 
-
     @Override
     public List<AgentAssignment> getAgentAssignment() {
         String query = "FROM AgentAssignment";
@@ -45,7 +44,8 @@ public class AgentAssignmentImpl implements AgentAssignmentService {
 
     @Override
     public AgentAssignment getAgentAssignmentById(Long id) {
-        return null;
+        AgentAssignment agentAssignment = agentAssignmentRepository.getById(id);
+        return agentAssignment;
     }
 
     @Override

@@ -13,7 +13,6 @@ public interface EmployeeService {
     Employee saveEmployee(Employee employee) throws Exception;;
     Employee updateEmployee(Employee employee);
     Employee getEmployeeById(Long id);
-    Employee getEmployeeByFirstName(String Alias);
     void deleteEmployeeById(Long id);
 
 }

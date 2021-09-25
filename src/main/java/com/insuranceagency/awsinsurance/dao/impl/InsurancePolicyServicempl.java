@@ -21,7 +21,7 @@ public class InsurancePolicyServicempl implements InsurancePolicyService {
     @PersistenceContext
     EntityManager entityManager;
 
-    private final InsurancePolicyRepository InsurancePolicyRepository;
+    private final InsurancePolicyRepository insurancePolicyRepository;
 
     @Override
     public List<InsurancePolicy> getInsurancePolicy()  {
@@ -31,14 +31,14 @@ public class InsurancePolicyServicempl implements InsurancePolicyService {
 
     @Override
     public InsurancePolicy saveInsurancePolicy(InsurancePolicy insurancePolicy) {
-        return InsurancePolicyRepository.save(insurancePolicy);
+        return insurancePolicyRepository.save(insurancePolicy);
     }
 
     public InsurancePolicy updateInsurancePolicy(InsurancePolicy insurancePolicy) {
-        InsurancePolicy temp = InsurancePolicyRepository.getById(insurancePolicy.getIdInsurancePolicy());
+        InsurancePolicy temp = insurancePolicyRepository.getById(insurancePolicy.getIdInsurancePolicy());
         temp.setIdInsurancePolicy(insurancePolicy.getIdInsurancePolicy());
         temp.setIdClient(insurancePolicy.getIdClient());
-        temp.setSellIDAgent(insurancePolicy.getSellIDAgent());
+        temp.setSellIdAgent(insurancePolicy.getSellIdAgent());
         temp.setIdType(insurancePolicy.getIdType());
         temp.setIdStatus(insurancePolicy.getIdStatus());
         temp.setPeriod(insurancePolicy.getPeriod());
@@ -49,17 +49,18 @@ public class InsurancePolicyServicempl implements InsurancePolicyService {
         temp.setMonthlyFee(insurancePolicy.getMonthlyFee());
         temp.setComission(insurancePolicy.getComission());
         temp.setActive(insurancePolicy.isActive());
-        return InsurancePolicyRepository.save(temp);
+        return insurancePolicyRepository.save(temp);
     }
 
     @Override
     public InsurancePolicy getInsurancePolicyById(Long id) {
-        return null;
+        InsurancePolicy insurancePolicy = insurancePolicyRepository.getById(id);
+        return insurancePolicy;
     }
 
     @Override
     public void deleteInsurancePolicyById(Long id) {
-        InsurancePolicy temp = InsurancePolicyRepository.getById(id);
-        InsurancePolicyRepository.delete(temp);
+        InsurancePolicy temp = insurancePolicyRepository.getById(id);
+        insurancePolicyRepository.delete(temp);
     }
 }

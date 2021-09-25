@@ -1,10 +1,7 @@
 package com.insuranceagency.awsinsurance.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.text.SimpleDateFormat;
@@ -13,6 +10,8 @@ import java.util.Date;
 @Entity
 @Table(name = "Client")
 @ToString @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Client {
 

@@ -1,16 +1,16 @@
 package com.insuranceagency.awsinsurance.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "PolicyType")
 @ToString @EqualsAndHashCode
-
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class PolicyType {
 
     @Id
@@ -33,7 +33,7 @@ public class PolicyType {
     @Getter @Setter @Column(name = "maxDependent")
     private int maxDependent;
 
-    @Getter @Setter @Column(name = "commission")
-    private double commission;
+    @Getter @Setter @Column(name = "comission")
+    private double comission;
 
 }

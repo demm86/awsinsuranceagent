@@ -11,6 +11,5 @@ public interface PolicyStatusService {
     PolicyStatus savePolicyStatus(PolicyStatus policyStatus) throws Exception;;
     PolicyStatus updatePolicyStatus(PolicyStatus policyStatus);
     PolicyStatus getPolicyStatusById(Long id);
-    PolicyStatus getPolicyStatusByDescription(String descriptionInfo);
     void deletePolicyStatusById(Long id);
 }
