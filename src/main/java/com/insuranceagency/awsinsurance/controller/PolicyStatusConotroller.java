@@ -52,9 +52,9 @@ public class PolicyStatusConotroller {
         policyStatusService.deletePolicyStatusById(id);
     }
 
-    @RequestMapping(value = "/api/policystatus/{desc}", method = RequestMethod.GET)
-    public PolicyStatus policyStatusDescription (@PathVariable String desc) {
-        return policyStatusService.getPolicyStatusByDescription(desc);
+    @RequestMapping(value = "/api/policystatus/{id}", method = RequestMethod.GET)
+    public PolicyStatus getPolicyStatusById (@PathVariable Long id) {
+        return policyStatusService.getPolicyStatusById(id);
     }
 
 
